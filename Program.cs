@@ -18,8 +18,6 @@ namespace LineComparisonProblem
             
             Program.Distance(x1,x2,y1,y2);
             Program.Checkequality();
-
-
         }
         public static double Distance(double x1, double x2, double y1, double y2)
         {
@@ -42,11 +40,25 @@ namespace LineComparisonProblem
             
             Console.WriteLine("Length of Lines are Equal : " + line1.Equals(line2));
         }
+        public static void Compare(double line1, double line2)
+        {
 
-        
+            int linesCompare = (line1.CompareTo(line2));
 
-           
 
-          
+            if (linesCompare.Equals(0))
+                Console.WriteLine(" Result : Both the lines are having same length or both lines are equal.");
+            else if (linesCompare.Equals(-1))
+                Console.WriteLine(" Result : Length of FirstLine Is lesser Than secondLine");
+            else
+                Console.WriteLine(" Result : Length of FirstLine Is Greater Than secondLine");
+
+        }
+
+
+
+
+
+
     }
 }
